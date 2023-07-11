@@ -5,14 +5,13 @@ import org.springframework.hateoas.RepresentationModel;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class PrestacaoVO extends RepresentationModel<PrestacaoVO>  implements Serializable {
+public class PrestacaoVO extends RepresentationModel<PrestacaoVO> implements Serializable {
 
     private Long id;
     private Long idReserva;
     private String formaPagamento;
     private Double valor;
     private Boolean status;
-    // Construtores, getters e setters
 
     public PrestacaoVO() {
     }
@@ -24,10 +23,6 @@ public class PrestacaoVO extends RepresentationModel<PrestacaoVO>  implements Se
         this.valor = valor;
         this.status = status;
     }
-
-    // Outros métodos, se necessário
-
-    // Getters e setters
 
     public Long getId() {
         return id;

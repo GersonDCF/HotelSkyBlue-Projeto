@@ -15,8 +15,6 @@ public class Prestacao implements Serializable {
     @OneToOne
     @JoinColumn(name = "reserva_id")
     private Reserva reserva;
-
-
     @Column(name = "forma_pagamento")
     private String formaPagamento;
 
@@ -24,11 +22,18 @@ public class Prestacao implements Serializable {
 
     private Boolean status;
 
-    // Construtores, getters e setters
+    @Column
+    private Long idReserva;
 
-    public Prestacao() {
+    public Long getIdReserva() {
+        return idReserva;
     }
 
+    public void setIdReserva(Long idReserva) {
+        this.idReserva = idReserva;
+    }
+    public Prestacao() {
+    }
     public Prestacao(Reserva reserva, String formaPagamento, Double valor, Boolean status) {
         this.reserva = reserva;
         this.formaPagamento = formaPagamento;

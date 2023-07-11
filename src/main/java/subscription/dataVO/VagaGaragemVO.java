@@ -10,6 +10,7 @@ public class VagaGaragemVO implements Serializable {
     private Long id;
     private Long idReserva;
     private boolean disponibilidade;
+
     public VagaGaragemVO() {
     }
 

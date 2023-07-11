@@ -5,7 +5,6 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
-
 @Entity
 @Table(name = "vaga_garagem")
 public class VagaGaragem implements Serializable {
@@ -19,6 +18,9 @@ public class VagaGaragem implements Serializable {
 
     @Column(nullable = false)
     private boolean disponibilidade;
+
+    @Column
+    private Long idReserva;
 
     public VagaGaragem() {
     }
@@ -51,6 +53,14 @@ public class VagaGaragem implements Serializable {
 
     public void setDisponibilidade(boolean disponibilidade) {
         this.disponibilidade = disponibilidade;
+    }
+
+    public Long getIdReserva() {
+        return idReserva;
+    }
+
+    public void setIdReserva(Long idReserva) {
+        this.idReserva = idReserva;
     }
 
     @Override
